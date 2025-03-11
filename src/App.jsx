@@ -46,19 +46,18 @@ function App() {
 
   const handleEdit = (e) => {
     let id = e.target.name;
-    mainInput.current.focus();
     let indexx = todos.findIndex((todo) => todo.id === id);
     localStorage.setItem("index", indexx);
     let newTodos = [...todos];
     if (newTodos[indexx].isCheckbox === false) {
       addref.current.style.display = "none";
+      mainInput.current.focus();
       updateref.current.style.display = "block";
       setTodo(newTodos[indexx].todo);
     }
   };
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
-      alert("Enter key pressed!");
       if (addref.current.style.display != "none")
         handleAdd();
       if (updateref.current.style.display != "none")
