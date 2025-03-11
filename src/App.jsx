@@ -90,7 +90,7 @@ function App() {
           <input className="bg-white w-[85%] p-2 rounded-md" onChange={handleInputAddTodo} value={todo} type="text" />
           <button ref={addref} className="bg-red-500 w-[12%] p-1 text-gray-800 rounded-md hover:bg-red-600 cursor-pointer transition-all duration-200"
             onClick={handleAdd}>Add</button>
-          <button ref={updateref} className="bg-red-500 max-[500px]:w-[16%] w-[12%] p-1 text-gray-800 rounded-md hover:bg-red-600 cursor-pointer transition-all duration-200 hidden"
+          <button ref={updateref} className="bg-red-500 max-[500px]:w-[18%] w-[12%] p-1 text-gray-800 rounded-md hover:bg-red-600 cursor-pointer transition-all duration-200 hidden"
             onClick={handleUpdate}>Update</button>
         </div>
         <div className="w-[20vw] max-[500px]:text-nowrap">
