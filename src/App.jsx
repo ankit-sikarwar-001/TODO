@@ -90,7 +90,7 @@ function App() {
           <input className="bg-white w-[85%] p-2 rounded-md" onChange={handleInputAddTodo} value={todo} type="text" />
           <button ref={addref} className="bg-red-500 w-[12%] p-1 text-gray-800 rounded-md hover:bg-red-600 cursor-pointer transition-all duration-200"
             onClick={handleAdd}>Add</button>
-          <button ref={updateref} className="bg-red-500 max-[500px]:w-[14%] w-[12%] p-1 text-gray-800 rounded-md hover:bg-red-600 cursor-pointer transition-all duration-200 hidden"
+          <button ref={updateref} className="bg-red-500 max-[500px]:w-[16%] w-[12%] p-1 text-gray-800 rounded-md hover:bg-red-600 cursor-pointer transition-all duration-200 hidden"
             onClick={handleUpdate}>Update</button>
         </div>
         <div className="w-[20vw] max-[500px]:text-nowrap">
@@ -99,7 +99,7 @@ function App() {
         <h1 className="text-2xl text-bold m-4">Your Todo`s</h1>
         <div className="w-[84%] max-[500px]:w-[95vw] grid gap-1.5">
           {todos.map(item => {
-            return (showFinished || !item.isCheckbox) && <div key={item.id} className={`flex items-center max-[500px]:pl-1 w-[95%] h-[10vh] bg-gray-100 rounded-md justify-around`}>
+            return (showFinished || !item.isCheckbox) && <div key={item.id} className={`flex items-center max-[500px]:pl-1 w-[95%] h-[10vh] bg-gray-100 rounded-md justify-around `}>
               <input name={item.id} ref={checkref} checked={item.isCheckbox} onChange={handleCheck} className="h-[100%] w-[4%] max-[500px]:w-[5vw]" type="checkbox" />
               <p className={`overflow-y-auto w-[60%] ${item.isCheckbox ? "line-through" : ""} flex items-center`}>{item.todo}</p>
               <button name={item.id} onClick={handleEdit} ref={editref} className="bg-green-500 w-[14%] p-1 text-gray-800 rounded-md hover:bg-green-600 cursor-pointer transition-all duration-200">Edit</button>
